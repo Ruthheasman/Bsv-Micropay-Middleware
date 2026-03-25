@@ -1,0 +1,57 @@
+{
+  "name": "@ruthheasman/bsv-micropay-client",
+  "version": "0.1.0",
+  "description": "Client SDK for BSV micropayments. Wraps fetch with automatic 402 payment handling. Works with @bsv/sdk for autonomous AI agents.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "bsv",
+    "bitcoin-sv",
+    "micropayments",
+    "client",
+    "sdk",
+    "402",
+    "pay-per-use",
+    "ai-agent",
+    "fetch"
+  ],
+  "author": "Ruth Heasman <info@ruthdesigns.co.uk> (https://ruthdesignsdigital.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ruthheasman/bsv-micropay-middleware.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ruthheasman/bsv-micropay-middleware/issues"
+  },
+  "homepage": "https://github.com/ruthheasman/bsv-micropay-middleware#readme",
+  "devDependencies": {
+    "@types/node": "^20.19.37",
+    "typescript": "^5.9.3"
+  },
+  "optionalDependencies": {
+    "@bsv/sdk": "^1.10.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
