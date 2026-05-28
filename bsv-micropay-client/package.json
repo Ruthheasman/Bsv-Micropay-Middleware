@@ -1,7 +1,7 @@
 {
-  "name": "@ruthheasman/bsv-micropay-middleware",
+  "name": "@ruthheasman/bsv-micropay-client",
   "version": "0.1.0",
-  "description": "Express middleware for BSV micropayments. Gate any API endpoint with pay-per-use BSV in one line. Works with BRC-100 wallets, HandCash, Yours, and Metanet. Agent-friendly — no OAuth, no redirects.",
+  "description": "Client SDK for BSV micropayments. Wraps fetch with automatic 402 payment handling. Works with @bsv/sdk for autonomous AI agents.",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -25,35 +25,31 @@
     "build": "tsc",
     "dev": "tsc --watch",
     "prepare": "npm run build",
-    "prepublishOnly": "npm run build",
-    "dev:example": "tsx example/server.ts",
-    "start": "node dist/example/server.js"
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "bsv",
     "bitcoin-sv",
     "micropayments",
-    "express",
-    "middleware",
+    "client",
+    "sdk",
     "402",
     "pay-per-use",
-    "handcash",
-    "brc100",
     "ai-agent",
-    "replit"
+    "fetch"
   ],
   "author": "Ruth Heasman <info@ruthdesigns.co.uk> (https://ruthdesignsdigital.com)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ruthheasman/Bsv-Micropay-Middleware.git"
+    "url": "git+https://github.com/Ruthheasman/Bsv-Micropay-Middleware.git",
+    "directory": "bsv-micropay-client"
   },
   "bugs": {
     "url": "https://github.com/Ruthheasman/Bsv-Micropay-Middleware/issues"
   },
   "homepage": "https://github.com/Ruthheasman/Bsv-Micropay-Middleware#readme",
   "peerDependencies": {
-    "express": "^4.0.0 || ^5.0.0",
     "@bsv/sdk": "^2.1.4"
   },
   "peerDependenciesMeta": {
@@ -63,9 +59,7 @@
   },
   "devDependencies": {
     "@bsv/sdk": "^2.1.4",
-    "@types/express": "^4.17.25",
     "@types/node": "^20.19.37",
-    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   },
   "engines": {
